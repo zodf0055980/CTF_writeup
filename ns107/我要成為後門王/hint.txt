@@ -1,0 +1,30 @@
+用 decompiler 工具找 evil()
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void welcome(){
+	puts("Welcome to my home!");
+}
+
+void evil(){
+	system("/bin/sh");
+}
+
+void exit_(){
+	puts("Now you must to leave.");
+	puts("Bye~");
+}
+
+int main(){
+	setbuf(stdin, 0);
+	setbuf(stdout, 0);
+	setbuf(stderr, 0);
+	char buf[30];
+	welcome();
+	puts("Please input your name:");
+	gets(buf);
+	printf("Hi %s ~\n", buf);
+	exit_();
+	return 0;
+}
