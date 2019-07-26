@@ -29,8 +29,8 @@ mov rsi, rsp
 xor rdx, rdx
 inc rdx
 shl rdx, 0x6
-write:
 syscall
+write:
 mov rdx, rax
 xor rax, rax
 inc rax
