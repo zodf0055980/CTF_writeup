@@ -20,3 +20,6 @@ rdx = length = read 回傳的 rax
 
 把 shellcode 轉 hex
 https://defuse.ca/online-x86-assembler.htm
+
+shellcode c 程式
+gcc -z execstack -o shell shell.c
