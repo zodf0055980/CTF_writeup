@@ -34,13 +34,13 @@ def lsb(b, nn):
 b = []
 t = pow(16,e,n)
 
-a = dec(c)
-for _ in range(size(n) // 4):
+for _ in range(size(n) // 4 + 1):
     c = (t * c) % n
     b.append(dec(c))
 
 for nn in range(1, len(b), 2):
     m = lsb(b, nn)
+    print(m)
     flag = long_to_bytes(m)
     if b'FLAG' in flag:
         print(flag)
