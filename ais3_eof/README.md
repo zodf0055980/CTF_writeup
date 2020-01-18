@@ -462,6 +462,7 @@ http://bgb.bircd.org/?fbclid=IwAR0SySTO5XQrKXw2f3cmT8NOsFeeSBK35mrxwfuFpP0vo2whT
 | 0x02 | 0x03 | 0x04 |
 |  K   |  L   |  M   |
 | 0x0C | 0x0D | 0x0E |
+
 以此類推，之後去 trace 按下確定送出時的 code，但發現一直找不到感覺是去檢查的程式碼，之後直開 ida ，指令集選擇 z80
 之後發現 ida 雖然可以透過去 deassemble 自己所指定的位置(因為之前已經有得到輸入時程式碼的進入點)，但無法 decompiler。
 用 ida 可以看到按下確定有 4 條路徑，分別是確定，選數字，刪除，另一條要 patch 會讓輸入會變成特殊的字元
